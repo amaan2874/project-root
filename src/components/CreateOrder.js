@@ -10,7 +10,7 @@ export default function CreateOrder({ userId }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('https://orderservice-7xr2.onrender.com/orders', { product, price, userId });
+            const res = await axios.post('https://apigateway-84s9.onrender.com/orders', { product, price, userId });
             setOrderId(res.data._id);
             setMessage('Order Created Successfully!');
             setProduct('');
