@@ -9,7 +9,7 @@ export default function CreateUser({ setUserId }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5002/users', { name, email });
+            const res = await axios.post('https://microservice1-guqp.onrender.com/users', { name, email });
             setUserId(res.data._id);
             setMessage(`User Created! ID: ${res.data._id}`);
             setName('');

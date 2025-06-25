@@ -8,7 +8,7 @@ export default function GetOrder() {
 
     const handleFetch = async () => {
         try {
-            const res = await axios.get(`http://localhost:5002/orders/${orderId}`);
+            const res = await axios.get(`https://apigateway-84s9.onrender.com/orders/${orderId}`);
             setOrderData(res.data);
             setMessage('');
         } catch (error) {
